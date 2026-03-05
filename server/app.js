@@ -1,6 +1,6 @@
 import express from "express";
-import terrorRoutes from "./routes/terrorRoutes.js";
-import testRoutes from "./routes/testRoutes.js";
+import moviesRoutes from "./routes/moviesRoutes.js";
+
 import cors from "cors";
 
 const app = express();
@@ -9,7 +9,7 @@ const port = 8000;
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/movies", terrorRoutes);
+app.use("/api/movies", moviesRoutes);
 
 
 app.listen(port, () => {
