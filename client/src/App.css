@@ -3,6 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .logo {
@@ -39,4 +42,16 @@
 
 .read-the-docs {
   color: #888;
+}
+
+nav {
+  width: 80vw;
+  color: black;
+  height: 5vh;
+  background-color: aquamarine;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }

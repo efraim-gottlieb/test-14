@@ -1,0 +1,11 @@
+.main {
+  background-color: #fff;
+  width: 82.5vw;
+  min-height: 78vh;
+  border-radius: 0.5rem;
+  color: black;
+}
+
+.movies {
+  display: grid;
+}
