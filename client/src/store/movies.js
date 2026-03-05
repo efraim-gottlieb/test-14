@@ -3,7 +3,7 @@ import { fetchData } from "../api/fetchData";
 
 const useMovies = create((set) => ({
   movies: [],
-
+https
   fetchMovies: async () => {
     const movies = await fetchData();
     set({ movies });
