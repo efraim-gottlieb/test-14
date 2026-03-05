@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import useMovies from "../store/movies";
-
+import "./seats.css"
 function Seats() {
   const { id } = useParams();
   const { movies , updateMovieSeat} = useMovies();
@@ -12,7 +12,7 @@ function Seats() {
       {movie.seats.map((s) => {
         return (
           <div className="seat" onClick={()=>{updateMovieSeat(movie.imdbID, s.id)}} style={{ backgroundColor: !s.isTaken ? 'green' : 'red' }}>
-              {JSON.stringify(s)}
+              {s.id}
           </div>
         )
       })}

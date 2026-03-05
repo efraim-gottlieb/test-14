@@ -1,0 +1,7 @@
+.seats {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+
+}
