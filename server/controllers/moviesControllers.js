@@ -1,7 +1,10 @@
-import fs from 'fs/promises'
-
+import fs from "fs/promises";
 
 export async function getMovies(req, res) {
-  const movies = await fs.readFile("./data/movies.json", "utf-8");
-  res.send(JSON.parse(movies));
+  const movies = JSON.parse(await fs.readFile("./data/movies.json", "utf-8"));
+  const seats = JSON.parse(await fs.readFile("./data/seats.json", "utf-8"));
+  movies.forEach((movie) => {
+    movie.seats = seats[movie.imdbID];
+  });
+  res.send(movies);
 }
